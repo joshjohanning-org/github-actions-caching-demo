@@ -26,7 +26,7 @@ jobs:
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('./yarn.lock') }}-${{ steps.node.outputs.version }}
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}-${{ steps.node.outputs.version }}
 
       - run: yarn install
 
@@ -56,7 +56,7 @@ jobs:
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('./yarn.lock') }}-${{ steps.node.outputs.version }}
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}-${{ steps.node.outputs.version }}
 
       - run: yarn install
 
